@@ -1,16 +1,21 @@
 package headfirst.compound.factory;
 
+/**
+ * This example improve functionality of Duck counter using Abstract Factory Pattern
+ */
+@SuppressWarnings("Duplicates")
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
-        simulator.simulate();
+        AbstractDuckFactory factory = new CountingDuckFactory();
+        simulator.simulate(factory);
     }
 
-    void simulate() {
-        Quackable mallardDuck = new QuackCounter(new MallardDuck());
-        Quackable redheadDuck = new QuackCounter(new RedheadDuck());
-        Quackable duckCall = new QuackCounter(new DuckCall());
-        Quackable rubberDuck = new QuackCounter(new RubberDuck());
+    void simulate(AbstractDuckFactory factory) {
+        Quackable mallardDuck = factory.createMallardDuck();
+        Quackable redheadDuck = factory.creatRedheadDuck();
+        Quackable duckCall = factory.createDuckCall();
+        Quackable rubberDuck = factory.createRubberDuck();
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
         System.out.println("\nDuck Simulator: With Decorator");

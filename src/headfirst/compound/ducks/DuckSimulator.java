@@ -1,5 +1,8 @@
 package headfirst.compound.ducks;
 
+/**
+ * This example uses polymorphism without applying any design patterns
+ */
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();

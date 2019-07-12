@@ -1,5 +1,8 @@
 package headfirst.compound.adapter;
 
+/**
+ * This example allows Geese to intermingle with Ducks using Adapter Pattern
+ */
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
