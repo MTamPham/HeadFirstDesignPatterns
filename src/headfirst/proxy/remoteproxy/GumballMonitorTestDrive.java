@@ -8,6 +8,11 @@ public class GumballMonitorTestDrive {
                 "rmi://boulder.mightygumball.com/gumballmachine",
                 "rmi://seattle.mightygumball.com/gumballmachine"};
 
+        if(args.length > 0) {
+            location = new String[1];
+            location[0] = args[0];
+        }
+
         GumballMonitor[] monitor = new GumballMonitor[location.length];
 
         for (int i = 0; i < location.length; i++) {

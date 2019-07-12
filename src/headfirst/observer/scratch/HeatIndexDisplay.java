@@ -6,7 +6,7 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
 
     public HeatIndexDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
-        // register the display as an headfirst.observer
+        // register the display as an observer
         this.weatherData.registerObserver(this);
     }
 

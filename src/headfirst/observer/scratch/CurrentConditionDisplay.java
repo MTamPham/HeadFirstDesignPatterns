@@ -7,7 +7,7 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
 
     public CurrentConditionDisplay(Subject weatherData) {
         this.weatherData = weatherData;
-        // register the display as an headfirst.observer
+        // register the display as an observer
         this.weatherData.registerObserver(this);
     }
 

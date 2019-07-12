@@ -7,7 +7,7 @@ public class ForecastDisplay implements Observer, DisplayElement {
 
     public ForecastDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
-        // register the display as an headfirst.observer
+        // register the display as an observer
         this.weatherData.registerObserver(this);
     }
 

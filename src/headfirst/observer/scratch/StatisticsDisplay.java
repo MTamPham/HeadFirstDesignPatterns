@@ -9,7 +9,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 
     public StatisticsDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
-        // register the display as an headfirst.observer
+        // register the display as an observer
         this.weatherData.registerObserver(this);
     }
 

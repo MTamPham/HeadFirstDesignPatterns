@@ -1,6 +1,8 @@
 package headfirst.proxy.remoteproxy;
 
+import java.net.MalformedURLException;
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
@@ -18,9 +20,11 @@ public class GumballMachineTestDrive {
             sb.append("//").append(args[0]).append("/gumballmachine");
             System.out.println("Binding " + sb.toString() + " to registry");
             Naming.rebind(sb.toString(), gumballMachine);
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.exit(1);
+            System.out.println("Server is ready");
+        } catch (RemoteException remoteExp) {
+            remoteExp.printStackTrace();
+        } catch (MalformedURLException malformedURLExp) {
+            malformedURLExp.printStackTrace();
         }
     }
 }
