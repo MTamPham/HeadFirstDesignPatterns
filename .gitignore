@@ -1,3 +1,10 @@
+/.idea
+.project
+.classpath
+/out
+target
+**.iml
+
 # Logs
 logs
 *.log
