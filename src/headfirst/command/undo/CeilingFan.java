@@ -1,5 +1,8 @@
 package headfirst.command.undo;
 
+/**
+ * Receiver
+ */
 public class CeilingFan {
     public static final int HIGH = 3;
     public static final int MEDIUM = 2;

@@ -1,5 +1,8 @@
 package headfirst.command.remote;
 
+/**
+ * Receiver
+ */
 public class CeilingFan {
 	String location = "";
 	int level;

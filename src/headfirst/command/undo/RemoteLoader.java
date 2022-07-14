@@ -1,5 +1,8 @@
 package headfirst.command.undo;
 
+/**
+ * Client
+ */
 public class RemoteLoader {
     public static void main(String[] args) {
         RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();

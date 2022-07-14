@@ -1,5 +1,8 @@
 package headfirst.command.remote;
 
+/**
+ * Invoker
+ */
 @SuppressWarnings("Duplicates")
 public class RemoteControl {
     // the remote control obtained from Home Automation or Bust, Inc. has 7 slots

@@ -1,5 +1,8 @@
 package headfirst.command.remote;
 
+/**
+ * Receiver
+ */
 public class Light {
 	String location = "";
 

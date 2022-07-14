@@ -1,5 +1,8 @@
 package headfirst.command.undo;
 
+/**
+ * Receiver
+ */
 public class Light {
 	String location;
 

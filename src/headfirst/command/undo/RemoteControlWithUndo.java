@@ -1,5 +1,8 @@
 package headfirst.command.undo;
 
+/**
+ * Invoker
+ */
 public class RemoteControlWithUndo {
     // the remote control obtained from Home Automation or Bust, Inc. has 7 slots
     private static final int MAX_SLOTS = 7;
