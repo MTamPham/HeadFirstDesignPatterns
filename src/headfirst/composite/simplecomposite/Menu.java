@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * This is Menu class
+ * This is Composite class
  */
 public class Menu extends MenuComponent {
     List<MenuComponent> menuComponents = new ArrayList<>();

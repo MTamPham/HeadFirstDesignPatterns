@@ -47,7 +47,6 @@ public class ImageProxyTestDrive {
         }
 
         // set up frame and menus
-
         Icon icon = new ImageProxy(initialURL);
         imageComponent = new ImageComponent(icon);
         frame.getContentPane().add(imageComponent);
