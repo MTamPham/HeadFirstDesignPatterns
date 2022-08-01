@@ -5,6 +5,9 @@
 target
 **.iml
 
+# Compiled classes
+*.class
+
 # Logs
 logs
 *.log

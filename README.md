@@ -124,7 +124,35 @@ The State Pattern allows an object to alter its behavior when its internal state
 |Remove all the troublesome if statements in the context||
  
 ### Proxy ###
- The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.
+The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.
+
+A remote proxy acts as a local representive to a remote object. The client talks to that local representive - called 'stub' - and thinks they are invoking methods on a remote object - called skeleton. Behind the scene, the stub packages up information about the call (arguments, method name and etc.) and ships it over the network to the skeleton; the skeleton then unpacks the information, finds out which method to call (and on which object) and invokes the real method on the real service object. 
+
+### RMI ###
+RMI provides a mechanism by which the server and the client communicate and pass information back and forth.
+
+This is an overview of the five steps for making the remote service.
+- Step 1: Make a Remote Interface
+    1. Extend java.rmi.Remote
+    2. Declare that all methods throw a RemoteException
+    3. Be sure arguments and return values are primitives or Serializable
+- Step 2: Make a Remote Implementation
+    1. Implement the Remote interface
+    2. Extend UnicastRemoteObject
+    3. Write a no-arg constructor that declares a RemoteException
+    4. Register the service with the RMI registry using Naming.rebind(String name, Remote obj)
+- Step 3: Generate the stubs and skeletons using rmic
+```
+$ rmic MyRemoteImpl
+```
+- Step 4: Start the RMI registry (rmiregistry)
+```
+$ rmiregistry
+```
+- Step 5: Start the remote service
+```
+$ java MyRemoteImpl
+```
 
 ## OO Principles ##
 1. Identify aspects of your application that vary and separate them from what stays the same. i.e. encapsulate what varies
