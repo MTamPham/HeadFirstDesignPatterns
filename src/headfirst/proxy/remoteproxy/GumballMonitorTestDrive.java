@@ -4,9 +4,14 @@ import java.rmi.Naming;
 
 public class GumballMonitorTestDrive {
     public static void main(String[] args) {
-        String[] location = {"rmi://santafe.mightygumball.com/gumballmachine",
-                "rmi://boulder.mightygumball.com/gumballmachine",
-                "rmi://seattle.mightygumball.com/gumballmachine"};
+        // rmi://subdomain.domain.com/gumballmachine
+        // where subdomain is the location, domain.com is the domain of Mighty Gumball company
+        // and gumballmachine is a generic name
+        String[] location = {
+            //"rmi://santafe.mightygumball.com/gumballmachine",
+            //"rmi://boulder.mightygumball.com/gumballmachine",
+            //"rmi://seattle.mightygumball.com/gumballmachine",
+            "rmi://127.0.0.1/gumballmachine"};
 
         if(args.length > 0) {
             location = new String[1];
